@@ -1,14 +1,19 @@
 import React from 'react'
 import './ExpenseItem.css';
 
-function ExpenseItem (){
+function ExpenseItem (props){
+   
     return (
-    <div> 
-    <div>Food - Rs 10</div>
+    <div className='expense-item'> 
 
-    <div>Petrol - Rs 100</div>
+    <div className='expense-item_description'> 
+    <h2>{props.title}</h2>
 
-    <div>Movies - Rs 200</div>
+   <div className='expense-item_price'>${props.amount}
+   
+   <div>{props.date.toISOString()}</div>
+    </div>
+    </div>
     </div>
     );
 }
