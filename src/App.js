@@ -31,17 +31,10 @@ const App =() => {
     ];
 
   return (
-   <div className='App'>
-    <h2>Lets get started </h2>
-    {
-    expenseDetails.map((expense) => (
-    <ExpenseItem 
-    title ={expense.title} 
-    date = {expense.date}
-    amount={expense.amount}
-    />
-   ))}
-    </div>
+    <div>
+    <h2>Let's get started!</h2>
+    <Expense items={expenseDetails} />
+  </div>
   );
 }
 export default App;
